@@ -1,17 +1,12 @@
 package controllers
 
-import com.google.inject.ImplementedBy
 import javax.inject._
 import play.api._
 import play.api.data.Forms._
 import play.api.data.validation.Constraints._
 import play.api.mvc._
 
-@ImplementedBy(classOf[EnglishHello])
-trait Hello {
-  def sayHello(name: String): String
-}
-class EnglishHello extends Hello {
+class Hello {
   def sayHello(name: String) = "Hello " + name
 }
 
